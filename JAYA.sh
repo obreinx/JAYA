@@ -6,7 +6,7 @@ echo "
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++                                                                                             "
 
 echo "usage: ./JAYA.sh target.com"
-echo "Enter Your Target Domain:"
+echo "[Enter Your Target Domain]:"
 read target
 mkdir $target
 cd $target
