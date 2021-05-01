@@ -16,7 +16,9 @@ java-script(files)
 nuclei
 # Installation
 chmod +x ./install_tools.sh
+
 sudo ./install_tools.sh
+
 chmod +x ./JAYA.sh
 # Usage:
 ./JAYA.sh
