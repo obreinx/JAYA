@@ -12,7 +12,7 @@ mkdir $target
 cd $target
 ##Subdomains-ENUMERATING
 echo "Getting All Subdoamins"
-{assetfinder $target & subfinder -d $target; } > all_subdomains.txt
+{assetfinder $target & subfinder -d $target;} > all_subdomains.txt
 ###Subdomain-takerover
 echo"Checking For Subdomain TakeOvers"
 subzy -targets all_subdomains.txt -hide_fails
