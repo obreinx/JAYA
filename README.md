@@ -13,17 +13,17 @@ subdomains
 
 live-subdomains
 
-subdomain-takeover(check)
+subdomain takeover(check)
 
-port-scanning
+port scanning
 
 waybackurl
 
-vulun-parameters
+vulun parameters
 
-directory-search
+directory search
 
-java-script(files)
+javascript(files)
 
 nuclei
 
