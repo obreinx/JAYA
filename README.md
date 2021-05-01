@@ -22,5 +22,7 @@ chmod +x ./install_tools.sh
 sudo ./install_tools.sh
 
 chmod +x ./JAYA.sh
+
+add your github username & password in config.yaml file
 # Usage:
 ./JAYA.sh
