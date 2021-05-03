@@ -9,14 +9,14 @@ mkdir $target
 cd $target
 ##Subdomains-ENUMERATING
 echo "Getting All Subdoamins"
-(assetfinder $target;subfinder -d $target) > all_subdomains.txt
+(assetfinder $target;subfinder -silent -d $target) > all_subdomains.txt
 ###Subdomain-takerover
 echo "###Checking For Subdomain TakeOvers###"
 subzy -targets all_subdomains.txt -hide_fails
 ####Live_Subdomains
 echo "###checking live subdoamins###"
-cat all_subdomains.txt | httpx -status-code > live_subdomains_with_status.txt
-cat all_subdomains.txt | httpx > live_subdomains.txt
+cat all_subdomains.txt | httpx -silent -status-code > live_subdomains_with_status.txt
+cat all_subdomains.txt | httpx -silent > live_subdomains.txt
 ###Waybackurl
 echo "###checking waybackurl###"
 cat live_subdomains.txt | waybackurls > waybackurls.txt
@@ -40,7 +40,7 @@ cat waybackurls.txt | gf ssrf > /parameters/ssrf.txt
 cat waybackurls.txt | gf rce > /parameters/rce.txt
 ###javascript files
 echo "###javascript files###"
-cat waybackurls.txt | grep js > javascript.txt
+cat waybackurls.txt | grep .js > javascript.txt
 ####Nuclei
 echo "###checking files with nuclei###"
-nuclei -l all_subdomains.txt -t /home/obr/Desktop/nuclei-templates -o nuclei.txt
+nuclei -l all_subdomains.txt -silent -t /home/obr/Desktop/nuclei-templates -o nuclei.txt
